@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Cricket-themed color palette */
+    --background: 220 30% 5%;
+    --foreground: 0 0% 98%;
+
+    --card: 220 20% 8%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 220 20% 8%;
+    --popover-foreground: 0 0% 95%;
+
+    /* Cricket green primary */
+    --primary: 120 65% 15%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 120 80% 25%;
+
+    --secondary: 220 20% 12%;
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 220 15% 10%;
+    --muted-foreground: 220 10% 60%;
+
+    --accent: 220 20% 15%;
+    --accent-foreground: 0 0% 95%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 15% 18%;
+    --input: 220 15% 15%;
+    --ring: 120 65% 35%;
+
+    --radius: 0.75rem;
+
+    /* Card rarity colors */
+    --common: 220 10% 40%;
+    --common-glow: 220 15% 50%;
+    
+    --rare: 210 100% 45%;
+    --rare-glow: 210 100% 60%;
+    
+    --epic: 280 100% 55%;
+    --epic-glow: 280 100% 70%;
+    
+    --legendary: 45 100% 50%;
+    --legendary-glow: 45 100% 65%;
+
+    /* Gradients */
+    --gradient-cricket: linear-gradient(135deg, hsl(120 65% 15%), hsl(120 80% 25%));
+    --gradient-pack: linear-gradient(45deg, hsl(220 20% 8%), hsl(220 30% 12%));
+    --gradient-legendary: linear-gradient(135deg, hsl(45 100% 50%), hsl(45 100% 65%));
+    --gradient-epic: linear-gradient(135deg, hsl(280 100% 55%), hsl(280 100% 70%));
+    --gradient-rare: linear-gradient(135deg, hsl(210 100% 45%), hsl(210 100% 60%));
+
+    /* Glass morphism */
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    
+    /* Shadows and glows */
+    --shadow-glow: 0 0 30px hsl(var(--primary-glow) / 0.3);
+    --shadow-legendary: 0 0 40px hsl(var(--legendary-glow) / 0.5);
+    --shadow-epic: 0 0 35px hsl(var(--epic-glow) / 0.4);
+    --shadow-rare: 0 0 25px hsl(var(--rare-glow) / 0.3);
+
+    --sidebar-background: 220 20% 8%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 120 65% 15%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 220 20% 12%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 220 15% 18%;
+    --sidebar-ring: 120 65% 35%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
